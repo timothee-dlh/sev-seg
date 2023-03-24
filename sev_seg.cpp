@@ -1,9 +1,6 @@
 #include "Arduino.h"
 #include "sev_seg.h"
-int nmb1;
-int nmb2;
-int nmb3;
-int nmb4;
+int nmb1, nmb2, nmb3, nmb4;
 int a, b, c, d, e, f, g, D1, D2, D3, D4, DP;
 void convert(int number){
 	String strNumber = String(number);
