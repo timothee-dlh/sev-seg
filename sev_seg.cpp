@@ -4,7 +4,7 @@ int nmb1;
 int nmb2;
 int nmb3;
 int nmb4;
-int a, b, c, d, e, f, g, D1, D2, D3, D4;
+int a, b, c, d, e, f, g, D1, D2, D3, D4, DP;
 void convert(int number){
 	String strNumber = String(number);
 	nmb1 = strNumber.charAt(0) - '0';
@@ -33,34 +33,21 @@ void two(int digit){
 	digitalWrite(digit, LOW);
 	delay(5);
 }
-//Doesn't work, arduino dont accept the digitalWrite frome a function ?
-/*void output( int D1, int D2, int D3, int D4, int DP, int a, int b, int c, int d, int e, int f, int g){
-	digitalWrite(D1, OUTPUT);
-	digitalWrite(D2, OUTPUT);
-	digitalWrite(D3, OUTPUT);
-	digitalWrite(D4, OUTPUT);
-	digitalWrite(DP, OUTPUT);
-	digitalWrite(a, OUTPUT);
-	digitalWrite(b, OUTPUT);
-	digitalWrite(c, OUTPUT);
-	digitalWrite(d, OUTPUT);
-	digitalWrite(e, OUTPUT);
-	digitalWrite(f, OUTPUT);
-	digitalWrite(g, OUTPUT);
+void output(D1, D2, D3, D4, DP, a, b, c, d, e, f, g){ // à tester 
+	pinMode(D1, OUTPUT);
+	pinMode(D2, OUTPUT);
+	pinMode(D3, OUTPUT);
+	pinMode(D4, OUTPUT);
+	pinMode(DP, OUTPUT);
+	pinMode(a, OUTPUT);
+	pinMode(b, OUTPUT);
+	pinMode(c, OUTPUT);
+	pinMode(d, OUTPUT);
+	pinMode(e, OUTPUT);
+	pinMode(f, OUTPUT);
+	pinMode(g, OUTPUT);
 }
-void output( int D1, int D2, int D3, int D4, int a, int b, int c, int d, int e, int f, int g){
-	digitalWrite(D1, OUTPUT);
-	digitalWrite(D2, OUTPUT);
-	digitalWrite(D3, OUTPUT);
-	digitalWrite(D4, OUTPUT);
-	digitalWrite(a, OUTPUT);
-	digitalWrite(b, OUTPUT);
-	digitalWrite(c, OUTPUT);
-	digitalWrite(d, OUTPUT);
-	digitalWrite(e, OUTPUT);
-	digitalWrite(f, OUTPUT);
-	digitalWrite(g, OUTPUT);
-}*/
+}
 void pin(int one, int two, int three, int four, int five, int six, int seven, int Do, int Dt, int Dt3, int Df){
 a = one;
 b = two;
