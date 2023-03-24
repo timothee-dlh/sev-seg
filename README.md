@@ -33,8 +33,6 @@ pin(pin_a, pin_b, pin_c, pin_d, pin_e, pin_f, pin_g, pin_D1, pin_D2, pin_D3, pin
   pinMode(pin_D3, OUTPUT);
   pinMode(pin_D4, OUTPUT);
   pinMode(pin_DP, OUTPUT);
-
-
 }
 
 
