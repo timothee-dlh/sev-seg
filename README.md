@@ -7,6 +7,7 @@ Extract it and put it on the %appdata%/Local/Arduino/libraries folder
 All Done !  
 Use it by including sev_seg.h  
 
+Exemple :  
 ![image](https://user-images.githubusercontent.com/108541810/227641822-f3382761-a167-4200-8893-93876dbcc9b7.png)  
  
 #include <sev_seg.h>  
