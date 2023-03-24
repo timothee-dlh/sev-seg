@@ -5,30 +5,25 @@ int nmb1, nmb2, nmb3, nmb4;
 int a, b, c, d, e, f, g, D1, D2, D3, D4, DP;
 
 void convert(int number){
-	String strNumber = String(number);
-	nmb1 = strNumber.charAt(0) - '0';
-	nmb2 = strNumber.charAt(1) - '0';
-	nmb3 = strNumber.charAt(2) -'0';
-	nmb4 = strNumber.charAt(3) -'0';
-
+	if(number > 9999){
+	number = 0000;}
+	int digits[4];
+  for (int i = 3; i >= 0; i--) {
+    digits[i] = number % 10; 
+    number /= 10; 
+  }
+  	if (nmb1 > 9 || nmb1 < 0) {nmb1 = 0;}
+	if (nmb2 > 9 || nmb2 < 0) {nmb2 = 0;}
+	if (nmb3 > 9 || nmb3 < 0) {nmb2 = 0;}
+	if (nmb4 > 9 || nmb4 < 0) {nmb2 = 0;}
+nmb4 = digits[3];
+nmb3 = digits[2];
+nmb2 = digits[1];
+nmb1 = digits[0];
 
 	
 }
 
-/*void output(D1, D2, D3, D4, DP, a, b, c, d, e, f, g){ // marche pas pk ?
-	pinMode(D1, OUTPUT);
-	pinMode(D2, OUTPUT);
-	pinMode(D3, OUTPUT);
-	pinMode(D4, OUTPUT);
-	pinMode(DP, OUTPUT);
-	pinMode(a, OUTPUT);
-	pinMode(b, OUTPUT);
-	pinMode(c, OUTPUT);
-	pinMode(d, OUTPUT);
-	pinMode(e, OUTPUT);
-	pinMode(f, OUTPUT);
-	pinMode(g, OUTPUT);
-}*/
 void pin(int one, int two, int three, int four, int five, int six, int seven, int Do, int Dt, int Dt3, int Df){
 a = one;
 b = two;
@@ -45,26 +40,18 @@ D4 = Df;
 
 void write(int nombre){
 	convert(nombre);
-	if (nmb1 > 9 || nmb1 < 0) {nmb1 = 0;}
-	if (nmb2 > 9 || nmb2 < 0) {nmb2 = 0;}
-	if (nmb3 > 9 || nmb3 < 0) {nmb2 = 0;}
-	if (nmb4 > 9 || nmb4 < 0) {nmb2 = 0;}
-	Serial.println(nmb1);
-	Serial.println(nmb2);
-	Serial.println(nmb3);
-	Serial.println(nmb4);
 	switch(nmb1){
 		case 1:
 			one(D1);
-			Serial.println("case 1 nmb1");
 			break;
 		case 2:
-			//two(D1);
-			Serial.println("case 2 nmb1");
+			two(D1);
 			break;
 		case 3:
+			three(D1);
 			break;
 		case 4:
+			four(D1);
 			break;
 		case 5:
 			break;
@@ -77,23 +64,22 @@ void write(int nombre){
 		case 9:
 			break;
 		default:
-			Serial.println("default");
 			zero(D1);
 			break;
 	}
-	delay(1000);
+	clear();
 	switch(nmb2){
 		case 1:
 			one(D2);
-			Serial.println("case 1 nmb2");
 			break;
 		case 2:
 			two(D2);
-			Serial.println("case 2 nmb2");
 			break;
 		case 3:
+			three(D2);
 			break;
 		case 4:
+			four(D2);
 			break;
 		case 5:
 			break;
@@ -106,23 +92,21 @@ void write(int nombre){
 		case 9:
 			break;
 		default:
-			Serial.println("default");
 			zero(D2);
 			break;
-	}
-	delay(1000);
+	}clear();
 	switch(nmb3){
 		case 1:
 			one(D3);
-			Serial.println("case 1 nmb3");
 			break;
 		case 2:
 			two(D3);
-			Serial.println("case 2 nmb3");
 			break;
 		case 3:
+			three(D3);
 			break;
 		case 4:
+			four(D3);
 			break;
 		case 5:
 			break;
@@ -135,11 +119,9 @@ void write(int nombre){
 		case 9:
 			break;
 		default:
-			Serial.println("default");
 			zero(D3);
 			break;
-	}
-	delay(1000);
+	}clear();
 	switch(nmb4){
 		case 1:
 			one(D4);
@@ -148,8 +130,10 @@ void write(int nombre){
 			two(D4);
 			break;
 		case 3:
+			three(D4);
 			break;
 		case 4:
+			four(D4);
 			break;
 		case 5:
 			break;
@@ -163,8 +147,6 @@ void write(int nombre){
 			break;
 		default:
 			zero(D4);
-			Serial.println("default");
 			break;
-	}
-	clear(D1,D2,D3,D4);
+	}clear();
 }

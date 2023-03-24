@@ -1,4 +1,11 @@
 void zero(int digit);
 void one(int digit);
 void two(int digit);
-void clear(int digit1, int digit2, int digit3, int digit4);
+void three(int digit);
+void four(int digit);
+void five(int digit);
+void six(int digit);
+void seven(int digit);
+void eight(int digit);
+void nine(int digit);
+void clear();
