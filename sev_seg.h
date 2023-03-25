@@ -13,5 +13,5 @@ void eight(int digit);
 void nine(int digit);
 
 void pin(int one, int two, int three, int four, int five, int six, int seven, int D1, int D2, int D3, int D4);
-
+ 
 void write(int nombre1);

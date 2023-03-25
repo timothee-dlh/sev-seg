@@ -8,7 +8,7 @@ void convert(int number){
 	if(number > 9999){
 	number = 0000;}
 	int digits[4];
-  for (int i = 3; i >= 0; i--) {
+  for (int i = 3; i >= 0; --i) {
     digits[i] = number % 10; 
     number /= 10; 
   }
@@ -37,9 +37,13 @@ D2 = Dt;
 D3 = Dt3;
 D4 = Df;
 }
+bool conv = 0;
 
 void write(int nombre){
+	if (conv == 0){
 	convert(nombre);
+	conv = 1;
+	}
 	switch(nmb1){
 		case 1:
 			one(D1);
@@ -54,14 +58,19 @@ void write(int nombre){
 			four(D1);
 			break;
 		case 5:
+			five(D1);
 			break;
 		case 6:
+			six(D1);
 			break;
 		case 7: 
+			seven(D1);
 			break;
 		case 8:
+			eight(D1);
 			break;
 		case 9:
+			nine(D1);
 			break;
 		default:
 			zero(D1);
@@ -82,14 +91,19 @@ void write(int nombre){
 			four(D2);
 			break;
 		case 5:
+			five(D2);
 			break;
 		case 6:
+			six(D2);
 			break;
 		case 7: 
+			seven(D2);
 			break;
 		case 8:
+			eight(D2);
 			break;
 		case 9:
+			nine(D2);
 			break;
 		default:
 			zero(D2);
@@ -109,14 +123,19 @@ void write(int nombre){
 			four(D3);
 			break;
 		case 5:
+			five(D3);
 			break;
 		case 6:
+			six(D3);
 			break;
 		case 7: 
+			seven(D3);
 			break;
 		case 8:
+			eight(D3);
 			break;
 		case 9:
+			nine(D3);
 			break;
 		default:
 			zero(D3);
@@ -136,14 +155,19 @@ void write(int nombre){
 			four(D4);
 			break;
 		case 5:
+			five(D4);
 			break;
 		case 6:
+			six(D4);
 			break;
 		case 7: 
+			seven(D4);
 			break;
 		case 8:
+			eight(D4);
 			break;
 		case 9:
+			nine(D4);
 			break;
 		default:
 			zero(D4);

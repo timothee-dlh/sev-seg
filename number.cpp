@@ -38,11 +38,48 @@ void four(int digit){
 	digitalWrite(c, HIGH);
 	digitalWrite(digit, LOW);
 }
-void five(int digit){}
-void six(int digit){}
-void seven(int digit){}
-void eight(int digit){}
-void nine(int digit){}
+void five(int digit){
+	digitalWrite(a, HIGH);
+	digitalWrite(f, HIGH);
+	digitalWrite(g, HIGH);
+	digitalWrite(c, HIGH);
+	digitalWrite(d, HIGH);
+	digitalWrite(digit, LOW);
+}
+void six(int digit){
+	digitalWrite(a, HIGH);
+	digitalWrite(c, HIGH);
+	digitalWrite(d, HIGH);
+	digitalWrite(e, HIGH);
+	digitalWrite(f, HIGH);
+	digitalWrite(g, HIGH);
+	digitalWrite(digit, LOW);
+}
+void seven(int digit){
+	digitalWrite(a, HIGH);
+	digitalWrite(b, HIGH);
+	digitalWrite(c, HIGH);
+	digitalWrite(digit, LOW);
+}
+void eight(int digit){
+	digitalWrite(a, HIGH);
+	digitalWrite(b, HIGH);
+	digitalWrite(c, HIGH);
+	digitalWrite(d, HIGH);
+	digitalWrite(e, HIGH);
+	digitalWrite(f, HIGH);
+	digitalWrite(g, HIGH);
+	digitalWrite(digit, LOW);
+}
+void nine(int digit){
+	digitalWrite(a, HIGH);
+	digitalWrite(b, HIGH);
+	digitalWrite(c, HIGH);
+	digitalWrite(d, HIGH);
+	digitalWrite(f, HIGH);
+	digitalWrite(g, HIGH);
+	digitalWrite(digit, LOW);
+}
 
 void clear(){
 	digitalWrite(a, LOW);
