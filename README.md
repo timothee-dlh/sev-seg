@@ -12,7 +12,7 @@ Exemple :
    
 Functions:   
 Defining the pins used by the 7 segment display :   
-pin(pin_a, pin_b, pin_c, pin_d, pin_e, pin_f, pin_g, pin_D1, pin_D2, pin_D3, pin_D4); // Define the pins followin the image.  
+pin(pin_a, pin_b, pin_c, pin_d, pin_e, pin_f, pin_g, pin_D1, pin_D2, pin_D3, pin_D4); // Define the pins following the image.  
 
 Write a number on the 7 segment display :  
 write(number);   
