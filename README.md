@@ -2,7 +2,7 @@
 Arduino library to control 7 segments displays.  
 
 Installation :  
-git clone the repo or download the code.  
+git clone the repo or download the code (green button and download as zip).  
 Extract it and put it on the %appdata%/Local/Arduino/libraries folder  
 All Done !  
 Use it by including sev_seg.h  
